@@ -1,0 +1,78 @@
+/* Uncomment these lines when you need to compile LESS -> CSS */
+// @import "../../../env/lib/python2.7/site-packages/magi/static/less/main.less";
+// @import "../../../env/lib/python2.7/site-packages/magi/static/less/mixins/magicircles.less";
+
+/* Comment these lines when you need to compile LESS -> CSS */
+@import "main.less";
+@import "mixins/magicircles.less";
+
+@import url('https://fonts.googleapis.com/css?family=Comfortaa');
+
+/******************************************/
+/* Variables */
+
+@mainColor: #2FB7CA;
+@secondaryColor: #F8C239;
+
+/******************************************/
+/* Tools */
+
+/******************************************/
+/* MagiCircles */
+
+html {
+    .setup-sidebar(@mainColor);
+    .magicircles(@mainColor, @secondaryColor);
+}
+
+@import "generated_colors.less";
+
+body {
+    font-family: 'Comfortaa', sans-serif;
+    background: url('')
+}
+
+/******************************************/
+/* Single pages */
+
+.current-settings {
+    h1[id="preferences"], form[data-form-name="preferences"],
+    h1[id="emails"], form[data-form-name="emails"],
+    h1[id="security"], form[data-form-name="security"],
+    h1[id="addLink"], form[data-form-name="addLink"],
+    h1[id="avatar"], form[data-form-name="avatar"]
+    {
+        display: none;
+    }
+}
+
+/******************************************/
+/* MagiCollections */
+
+.default-account {
+    h3.level {
+        display: none;
+    }
+    .panel-heading-inside {
+        padding: 20px 30px;
+        .col-md-8 {
+            width: 100%;
+        }
+        h3 {
+            font-size: 2em;
+            line-height: normal;
+        }
+        .col-md-2 {
+            display: none;
+        }
+    }
+}
+
+ul.nav.nav-tabs.account-tabs {
+    display: none;
+}
+
+.panel-default-account .panel-body {
+    margin-top: 0;
+    padding-top: 30px;
+}
